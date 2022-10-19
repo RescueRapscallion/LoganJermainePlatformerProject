@@ -8,8 +8,8 @@ public class PlayerBeh : MonoBehaviour
     public Vector2 Force = new Vector2(0, 50);
     public bool OnGround;
     Rigidbody2D rb2d;
-    public Vector2 JumpForce = new Vector2(0, 5000);
-    
+    public Vector2 JumpForce = new Vector2(0, 9000);
+    private int diriction;
     public bool beenHit = false;
     public bool Look = true;
     public AudioClip TapSound;
@@ -59,11 +59,13 @@ public class PlayerBeh : MonoBehaviour
         {
 
             GetComponent<SpriteRenderer>().flipX = true;
+            diriction = -50;
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            diriction = 50;
 
         }
         if (GetComponent<SpriteRenderer>().flipX == true)
@@ -73,7 +75,9 @@ public class PlayerBeh : MonoBehaviour
             {
 
                 rb2d.velocity = Vector2.zero;
-                rb2d.AddForce(JumpForce);
+                //rb2d.AddForce(JumpForce);
+                rb2d.AddForce(new Vector2(JumpForce.x * diriction, JumpForce.y));
+
 
             }
 
@@ -83,10 +87,10 @@ public class PlayerBeh : MonoBehaviour
             //player facing right
             if (shouldJump && !beenHit && OnGround)
             {
-
+                print(diriction);
                 rb2d.velocity = Vector2.zero;
-                rb2d.AddForce(JumpForce );
-                rb2d.AddForce(transform.right*JumpForce);
+                rb2d.AddForce(new Vector2 (JumpForce.x * diriction, JumpForce.y ));
+                // rb2d.AddForce(transform.right*JumpForce);
             }
         }
     }
