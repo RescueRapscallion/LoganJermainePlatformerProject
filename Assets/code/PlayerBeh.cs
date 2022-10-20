@@ -8,6 +8,7 @@ public class PlayerBeh : MonoBehaviour
     public Vector2 Force = new Vector2(0, 50);
     public bool OnGround;
     Rigidbody2D rb2d;
+    public int Lifes;
     public Vector2 JumpForce = new Vector2(0, 9000);
     private int diriction;
     public bool beenHit = false;
@@ -20,12 +21,13 @@ public class PlayerBeh : MonoBehaviour
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        Lifes = 2;
     }
 
 
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         // make it move 
         float move = Input.GetAxis("Horizontal");
@@ -35,6 +37,13 @@ public class PlayerBeh : MonoBehaviour
         transform.position = pos;
         bool shouldJump = (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.DownArrow));
        // if (shouldJump && !beenHit && OnGround)
+
+       if(Lifes <= 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = (false);
+            Lifes = 2;
+            Invoke("ResetPlay", 1f);
+        }
         {
 
           //  rb2d.velocity = Vector2.zero;
@@ -105,6 +114,18 @@ public class PlayerBeh : MonoBehaviour
         {
             OnGround = true;
         }
+        else if (collision.gameObject.transform.tag == "enemey")
+        {
+            --Lifes;
+            {
+                print(Lifes);
+                rb2d.velocity = Vector2.zero;
+                rb2d.AddForce(new Vector2(JumpForce.x * diriction, JumpForce.y));
+                // rb2d.AddForce(transform.right*JumpForce);
+            }
+        }
+
+
     }
     public void OnCollisionExit2D(Collision2D collision)
     {
@@ -115,9 +136,11 @@ public class PlayerBeh : MonoBehaviour
             OnGround = false;
         }
     }
-
-    public void OnCollisionStay2D(Collision2D collision)
+    private void ResetPLay()
     {
-        
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        transform.position = new Vector3(-1.088f, -0.773f, 0);
     }
+
+
 }
