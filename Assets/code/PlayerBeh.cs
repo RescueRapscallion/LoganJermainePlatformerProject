@@ -138,7 +138,7 @@ public class PlayerBeh : MonoBehaviour
     }
     private void ResetPLay()
     {
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
         transform.position = new Vector3(-1.088f, -0.773f, 0);
     }
 
