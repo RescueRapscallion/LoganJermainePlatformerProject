@@ -23,8 +23,7 @@ public class PlayerBeh : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         Lifes = 2;
     }
-
-
+ 
 
     // Update is called once per frame
     public void Update()
@@ -43,10 +42,12 @@ public class PlayerBeh : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = (false);
             Lifes = 2;
             Invoke("ResetPlay", 1f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         {
 
           //  rb2d.velocity = Vector2.zero;
+           //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
            // rb2d.AddForce(JumpForce);
 
         }
