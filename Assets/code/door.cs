@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class door : MonoBehaviour
+public class Door : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,16 +12,15 @@ public class door : MonoBehaviour
     }
 
     // Update is called once per frame
-    //vo/i//d Update()
-    ///
-      private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        if (collision.gameObject.CompareTag("Door"))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        }
-        //  {/
-        //   / UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-    }//
+        
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Player")
+        {
+            SceneManager.LoadScene("2");
+        }
+    }
+}

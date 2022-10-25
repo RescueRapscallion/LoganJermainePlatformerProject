@@ -9,6 +9,7 @@ TagManager:
   - enemey
   - door
   - Door
+  - Fall
   layers:
   - Default
   - TransparentFX
