@@ -20,7 +20,7 @@ public class Door : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            SceneManager.LoadScene("2");
+            Application.Quit();
         }
     }
 }

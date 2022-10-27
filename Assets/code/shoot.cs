@@ -41,7 +41,7 @@ public class shoot : MonoBehaviour
         if (GetComponent<SpriteRenderer>().flipX == true)
         {
             // player facing left
-            if (Input.GetKeyDown(KeyCode.Z));
+            if (Input.GetKeyDown(KeyCode.X))
             {
 
                 rb2d.velocity = Vector2.zero;
@@ -52,12 +52,12 @@ public class shoot : MonoBehaviour
             }
 
         }
-        else
+        else if (Input.GetKeyDown(KeyCode.Z))
         {
             //player facing right
             
             {
-                print(diriction);
+                
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(boomForce.x * diriction, boomForce.y));
                 // rb2d.AddForce(transform.right*JumpForce);
@@ -68,6 +68,7 @@ public class shoot : MonoBehaviour
     private void GoBack()
     {
         //if returning
+        
             //vector3 . movetowards player 
     }
 
