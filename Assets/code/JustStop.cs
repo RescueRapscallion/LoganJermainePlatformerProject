@@ -9,7 +9,13 @@ public class JustStop : MonoBehaviour
     {
         
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Application.Quit();
+        }
+    }
     // Update is called once per frame
     void Update()
     {
