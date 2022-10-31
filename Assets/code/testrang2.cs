@@ -14,7 +14,7 @@ public class testrang2 : MonoBehaviour
     private int diriction;
     void Start()
     {
-        
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,10 +24,10 @@ public class testrang2 : MonoBehaviour
             .position, Player.transform.position, moveSpeed * Time.deltaTime);
        
         transform.position = new Vector3(tempVector2.x, tempVector2.y, transform.position.z);
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             // player facing left
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
 
                 rb2d.velocity = Vector2.zero;
@@ -41,7 +41,7 @@ public class testrang2 : MonoBehaviour
         else
         {
             //player facing right
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                
                 rb2d.velocity = Vector2.zero;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour
+public class door : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,8 @@ public class Door : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+
         }
     }
 }
