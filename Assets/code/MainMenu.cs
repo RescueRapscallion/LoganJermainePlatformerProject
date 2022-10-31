@@ -18,7 +18,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+    public void EndGame()
+    {
+        SceneManager.LoadScene(4);
 
+    }
+    public void MainMen()
+    {
+        Application.Quit();
+
+    }
     public void TriggerHowToPlay()
     {
         MyAnimator.SetTrigger("HowToPlay");

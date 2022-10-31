@@ -64,6 +64,9 @@ public class shoot : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Z))
             {
                 HasBeenThrown = true;
+            }
+            else
+            {
 
             }
 
