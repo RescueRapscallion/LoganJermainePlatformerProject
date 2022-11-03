@@ -11,9 +11,9 @@ public class shoot : MonoBehaviour
     public bool HasBeenThrown;
     bool r;
     public GameObject Player;
-    public int moveSpeed;
+    public int MoveSpeed;
     int diriction;
-    public Vector3 boomForce;
+    public Vector3 BoomForce;
     Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
@@ -58,7 +58,7 @@ public class shoot : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Z))
             {
-                rb2d.AddForce(boomForce,ForceMode2D.Impulse);
+                rb2d.AddForce(BoomForce,ForceMode2D.Impulse);
                
             }
             if (Input.GetKeyUp(KeyCode.Z))
@@ -76,7 +76,7 @@ public class shoot : MonoBehaviour
             if (Input.GetKey(KeyCode.Z))
             {
                 rb2d.velocity = Vector3.zero;
-                transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, moveSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, MoveSpeed * Time.deltaTime);
 
             }
            

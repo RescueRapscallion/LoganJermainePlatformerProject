@@ -7,7 +7,7 @@ public class SumButtons : MonoBehaviour
 {
     // Start is called before the first frame update
     private GameObject player;
-    private GameControler Controler;
+    private GameControler controler;
     void Start()
     {
 

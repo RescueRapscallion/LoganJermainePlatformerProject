@@ -11,7 +11,7 @@ public class PlayerBeh : MonoBehaviour
     public int Lifes;
     public Vector2 JumpForce = new Vector2(0, 9000);
     private int diriction;
-    public bool beenHit = false;
+    public bool BeenHit = false;
     public bool Look = true;
     public AudioClip TapSound;
     public AudioClip CollisionSound;
@@ -81,7 +81,7 @@ public class PlayerBeh : MonoBehaviour
         if (GetComponent<SpriteRenderer>().flipX == true)
         {
             // player facing left
-            if (shouldJump && !beenHit && OnGround)
+            if (shouldJump && !BeenHit && OnGround)
             {
 
                 rb2d.velocity = Vector2.zero;
@@ -95,7 +95,7 @@ public class PlayerBeh : MonoBehaviour
         else
         {
             //player facing right
-            if (shouldJump && !beenHit && OnGround)
+            if (shouldJump && !BeenHit && OnGround)
             {
                 print(diriction);
                 rb2d.velocity = Vector2.zero;
