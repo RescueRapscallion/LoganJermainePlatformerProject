@@ -125,7 +125,16 @@ public class PlayerBeh : MonoBehaviour
                 // rb2d.AddForce(transform.right*JumpForce);
             }
         }
-
+        else if (collision.gameObject.transform.tag == "rot")
+        {
+            ++Lifes;
+            {
+                print(Lifes);
+                rb2d.velocity = Vector2.zero;
+                rb2d.AddForce(new Vector2(JumpForce.x * diriction, JumpForce.y));
+                // rb2d.AddForce(transform.right*JumpForce);
+            }
+        }
 
     }
     public void OnCollisionExit2D(Collision2D collision)

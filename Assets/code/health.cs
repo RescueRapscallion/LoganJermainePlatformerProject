@@ -24,6 +24,13 @@ public class health : MonoBehaviour
             Heart1.gravityScale = 30;
             
         }
+        if (PlayerBeh.Lifes == 2)
+        {
+
+
+            Heart1.gravityScale = -30;
+
+        }
         if (PlayerBeh.Lifes == 0)
         {
 

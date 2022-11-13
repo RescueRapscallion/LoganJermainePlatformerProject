@@ -10,6 +10,7 @@ TagManager:
   - door
   - Door
   - Fall
+  - rot
   layers:
   - Default
   - TransparentFX
