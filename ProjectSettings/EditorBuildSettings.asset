@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/splint3.unity
     guid: f52f56c569be3154bbb588e9faecf64c
+  - enabled: 1
+    path: Assets/Scenes/turtorial.unity
+    guid: 7431c71dcd2087b45ad9885e90186239
   m_configObjects: {}

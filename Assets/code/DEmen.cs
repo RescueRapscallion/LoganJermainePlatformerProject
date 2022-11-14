@@ -51,4 +51,20 @@ public class DEmen : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+    public void Scene8()
+    {
+        SceneManager.LoadScene(8);
+    }
+    public void Scene9()
+    {
+        SceneManager.LoadScene(9);
+    }
+    public void Scene10()
+    {
+        SceneManager.LoadScene(10);
+    }
+    public void Scene11()
+    {
+        SceneManager.LoadScene(11);
+    }
 }
