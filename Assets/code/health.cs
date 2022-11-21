@@ -71,7 +71,7 @@ public class health : MonoBehaviour
         if (PlayerBeh.Lifes == 8)
         {
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("secret");
         }
           if (PlayerBeh.Lifes == 0)
         {

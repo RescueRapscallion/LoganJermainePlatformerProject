@@ -8,7 +8,7 @@ public class Bac : MonoBehaviour
     private float dirx;
     private float moveSpeed; 
     private Rigidbody2D rb;
-    private bool facingRight = false;
+   // private bool facingRight = false;
     private Vector3 localScale;
     // Start is called before the first frame update void Start()
    
