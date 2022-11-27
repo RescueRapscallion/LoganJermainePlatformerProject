@@ -17,6 +17,10 @@ public class DEmen : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void LSceneVVV()
+    {
+        SceneManager.LoadScene("secret");
+    }
     public void LScene1()
     {
         SceneManager.LoadScene(1);
