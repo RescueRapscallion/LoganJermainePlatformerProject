@@ -42,7 +42,7 @@ public class PlayerBeh : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = (false);
             Lifes = 2;
             Invoke("ResetPlay", 1f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("losereal");
         }
         {
 

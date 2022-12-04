@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/turtorial.unity
     guid: 7431c71dcd2087b45ad9885e90186239
+  - enabled: 1
+    path: Assets/Scenes/winfrfr.unity
+    guid: b4fa6dca9e0095141aaffe8e7923c3e9
   m_configObjects: {}

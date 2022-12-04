@@ -19,7 +19,7 @@ public class door2 : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("3win");
 
         }
     }

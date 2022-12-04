@@ -7,7 +7,7 @@ public class chace : MonoBehaviour
 
     // Start is called before the first frame update
     public GameObject Player;
-    public Vector2 TossForcs = new Vector2(0, 9000);
+    public Vector2 TossForcs = new Vector2(0, 0);
     public float MoveSpeed;
     void Start()
     {

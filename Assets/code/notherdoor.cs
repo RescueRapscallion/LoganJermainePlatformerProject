@@ -14,7 +14,7 @@ public class notherdoor : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("0");
 
         }
     }
