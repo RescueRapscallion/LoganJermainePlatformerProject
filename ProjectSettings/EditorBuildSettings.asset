@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/winfrfr.unity
     guid: b4fa6dca9e0095141aaffe8e7923c3e9
+  - enabled: 1
+    path: Assets/Scenes/secretDDD.unity
+    guid: 15db31aecfe66b149b8e689fbe7f2fe5
   m_configObjects: {}

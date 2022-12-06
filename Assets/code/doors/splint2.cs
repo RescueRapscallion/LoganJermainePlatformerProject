@@ -9,9 +9,16 @@ public class splint2 : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("secretDDD");
 
-    // Update is called once per frame
-    void Update()
+        }
+    }
+        // Update is called once per frame
+        void Update()
     {
         
     }
