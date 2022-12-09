@@ -17,9 +17,11 @@ public class chace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 tempVector2 = Vector2.MoveTowards(transform.position, Player.transform.position, MoveSpeed * Time.deltaTime);
+        if (Player != null)
+        {
+            Vector2 tempVector2 = Vector2.MoveTowards(transform.position, Player.transform.position, MoveSpeed * Time.deltaTime);
 
-        transform.position = new Vector3(tempVector2.x, tempVector2.y, transform.position.z);
-
+            transform.position = new Vector3(tempVector2.x, tempVector2.y, transform.position.z);
+        }
     }
 }
