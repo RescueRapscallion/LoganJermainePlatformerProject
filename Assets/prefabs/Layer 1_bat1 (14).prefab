@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2516491608919975907}
   - component: {fileID: 2516491608919975904}
   - component: {fileID: 2516491608919975905}
-  - component: {fileID: 2516491608919975910}
   - component: {fileID: 2034793951513788881}
   m_Layer: 0
   m_Name: Layer 1_bat1 (14)
@@ -322,22 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   TossForcs: {x: 0, y: 9000}
-  moveSpeed: 30
---- !u!114 &2516491608919975910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2516491608919975911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de2ee9dbeae30b4787300ac0943bdcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  TossForce: {x: 0, y: 9000}
-  moveSpeed: 1
+  MoveSpeed: 0
 --- !u!114 &2034793951513788881
 MonoBehaviour:
   m_ObjectHideFlags: 0
